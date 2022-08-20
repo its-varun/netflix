@@ -10,14 +10,19 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          {
+          {/* {
             !user ?(
               <Route exact path="/" element={<LoginScreen />} />
 
             ) :(
-              <Route exact path="/" element={<HomeScreen />} />
+              <Route exact path="/home" element={<HomeScreen />} />
             )
           }
+           */}
+          if(user==null){
+            <Route exact path="/" element={<LoginScreen />} />
+          }
+          <Route exact path="/home" element={<HomeScreen />} />
         </Routes>
       </BrowserRouter>
     </>
